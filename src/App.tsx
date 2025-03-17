@@ -15,7 +15,7 @@ const WeatherApp: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [city, setCity] = useState<string>("Jakarta"); // Default kota
 
-  const API_KEY = "56fb1ce2b84a614b84bd298fb36f5b72"; // Ganti dengan API Key Anda
+  const API_KEY = import.meta.env.VITE_WEATHER_API_KEY; // Ganti dengan API Key Anda
 
   const fetchWeather = async (location: string) => {
     setLoading(true);
